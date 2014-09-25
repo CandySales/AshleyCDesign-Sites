@@ -1,14 +1,65 @@
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>AC Design</title>
-    <link media="all" rel="stylesheet" type="text/css" href="styles/main.css" />
-  </head>
-  <body class="page-home">
-    <div class="page-wrapper">
-      <div class="into">
-        <h2>Welcome</h2>
-      </div>
-    </div>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    
+    <title>Home-Ashley Full WebSite</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+<script src="js/jquery.min.js"></script>
+
+<!--Script for the menu-->  
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="header">
+<div class="logo">
+<img src="images/logo.jpg" alt="Logo">
+</div><!--End of logo-->
+
+  <div id="navMenu">
+    <ul>
+      <li class="active"><a href="#">HOME</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="photography3.html">PHOTOGRAPHY</a></li>
+      <li><a href="inspiration.html">INSPIRATION</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+   </ul>
+  </div><!--End of id "navMenu" -->
+
+</div><!--End of id ""header"" -->
+
+<div id="contentHomePage">
+  <img src="images/welcomeMainPage.png" width="1224" height="792"></div><!--End of id="contentHomePage"-->
+
+
+</div><!--End of wrapper-->
+<div id="footer">
+<p>Copyright &copy; 2014 Ashley Canizales. <a href="http://www.detodos.com">Created by Detodos.com</a></p>
+</div><!--End div id footer--> 
+
+
+
+</body>
 </html>
